@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wait Time Tracker</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Current Wait Times</h1>
+    <ul>
+      <% rides.forEach(function(ride) { %>
+        <li><%= ride.name %> - <%= ride.wait %></li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
