@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Wait Time Tracker</title>
+    <title>Concession Kiosk - Menu</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Current Wait Times</h1>
-    <ul>
-      <% rides.forEach(function(ride) { %>
-        <li><%= ride.name %> - <%= ride.wait %></li>
-      <% }); %>
-    </ul>
+    <h1>Concession Kiosk - Menu</h1>
+    <form action="/" method="post">
+      <div style="height:110px">
+          <img src="/images/hotdog.jpg" width="100" style="float:left"> <input type="number" name="hotdog" value="0" style="margin-left: 5px; width: 40px;height: 40px">
+      </div>
+      <div style="height:110px">
+        <img src="/images/hamburger.jpg" width="100" style="float:left"> <input type="number" name="hamburger" value="0" style="margin-left: 5px; width: 40px;height: 40px">
+      </div>
+      <div style="height:110px">
+        <img src="/images/salad.jpg" width="100" style="float:left"> <input type="number" name="salad" value="0" style="margin-left: 5px; width: 40px;height: 40px">
+      </div>
+      <div style="height:110px">
+        <img src="/images/pizza.jpg" width="100" style="float:left"> <input type="number" name="pizza" value="0" style="margin-left: 5px; width: 40px;height: 40px">
+      </div>
+      <div style="height:110px">
+        <img src="/images/soda.jpg" width="100" style="float:left"> <input type="number" name="soda" value="0" style="margin-left: 5px; width: 40px;height: 40px">
+      </div>
+        <input type="submit" value="Place Order">
+    </form>
   </body>
 </html>
