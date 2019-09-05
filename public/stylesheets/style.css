@@ -1,88 +1,63 @@
 body {
   font: 18px "Helvetica";
   margin: 20px;
-
-}
-
-ol, ul {
-  padding-left: 30px;
-}
-
-.treadmill {
-  width: 70%;
-  min-width: 340px;
-  height: auto;
-  background-color: #ddd;
-  border-radius: 30px;
-  position: relative;
-}
-
-.treadmill-panels {
-  width: 320px;
-  height: auto;
-  margin: 0 auto;
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-}
-
-.treadmill-panel {
-  width: 300px;
-  background-color: #555;
-  margin: 0px 0px 10px 0px;
-  padding: 15px 10px 15px 10px;
-  color: cyan;
-  font-size: 36px;
   text-align: center;
-  border-radius: 15px;
-}
-
-.treadmill-panel:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.treadmill-wrapper {
-  display: inline-block;
-}
-
-.treadmill-wrapper.pace {
-  font-size: 24px;
-}
-
-.treadmill-title {
-  color: #fff;
-  font-size: 20px;
-  padding-bottom: 10px;
-}
-
-.treadmill-control {
-  background: #eee;
-  border: 1px solid #999;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 48px;
-  height: 48px;
-  margin-left: 10px;
-  padding: 0;
-  text-align: center;
-  width: 48px;
-  border-radius: 5px;
-  color: #555;
 
 }
 
-.treadmill-control:focus {
-  outline: none;
+.form-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  border-width: 4px;
+  border-color: black;
+  border-style: solid;
+  padding: 5px;
+  background-color: #fde9e4;
 }
 
-.kbd-navigation .treadmill-control:focus {
-  background: #ddd;
+.form-row {
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.treadmill {
-  display: block;
-  /*flex-direction: row;*/
+.form-row img {
+  float:left;
+  padding-left: 30%;
+}
+
+.form-row img.hotdog {
+  margin-top: 5px;
+}
+
+.form-row img.hamburger {
+  margin-top: -10px;
+}
+
+.form-row img.salad {
+  margin-top: -5px;
+}
+
+.form-row img.pizza {
+  margin-top: 10px;
+}
+
+.form-row img.soda {
+  margin-top: -5px;
+}
+
+.form-row input {
+  margin-right: 30%;
+  width: 30px;
+  height: 40px;
+  margin-top: 20px;
+  line-height: 40px;
+  font-size: 30px;
+  padding-left: 5px;
+}
+
+input.submit {
+  padding: 5px;
+  font-size: 30px;
 }
