@@ -11,19 +11,19 @@ router.get('/', function(req, res, next) {
 
 /* POST main page */
 router.post('/', function (req, res, next) {
-  request("http://" + host+":"+port + "/ticketNumber", function (err, response, body) {
+  let url = "http://" + host + ":" + port + "/ticketNumber?hotdog=" +
+             req.body.hotdog + "&hamburger=" + req.body.hamburger + "&salad=" +
+             req.body.salad + "&pizza=" + req.body.pizza + "&soda=" +req.body.soda; 
 
-    
+  request.get(url, function( err, response, body) {
     if(err){
-      //res.render('index', { rides: [{name: 'error: ' + err, wait: -1 }]});
       res.render('thankyou', { ticketNumber: -1 });
     } else {
-      var ticketNum = JSON.parse(body);
-      res.render('thankyou', { ticketNumber: ticketNum.result });
+      let ticketInfo = JSON.parse(body);
+      res.render('thankyou', { ticketNumber: ticketInfo.result, order: ticketInfo.order  });
       
     }
   });
-  //res.render('thankyou', { ticketNumber: 100, hotdog: req.hotdog, pizza: req.pizza });
-})
+});
 
 module.exports = router;
