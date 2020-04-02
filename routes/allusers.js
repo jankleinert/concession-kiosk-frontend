@@ -7,11 +7,11 @@ router.get('/allusers', function (req, res, next) {
   
     request.get(url, function( err, response, body) {
       if(err){
-        res.render('thankyou', { userNumber: -1 });
+        res.render('allusers', { userNumber: -1 });
       } else {
         let userInfo = JSON.parse(body);
         console.log(userInfo);
-        res.render('thankyou', { users: userInfo  });
+        res.render('allusers', { users: userInfo  });
         
       }
     });

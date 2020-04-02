@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', function(req, res, next) {
   console.log('req: ' + req);
   
-  res.render('thankyou', { ticketNumber: 200 });
+  res.render('thankyou', { userNumber: 200 });
 });
 
 router.get('')
