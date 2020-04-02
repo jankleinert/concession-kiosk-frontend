@@ -11,16 +11,16 @@ router.get('/', function(req, res, next) {
 
 /* POST main page */
 router.post('/', function (req, res, next) {
-  let url = "http://" + host + ":" + port + "/ticketNumber?hotdog=" +
-             req.body.hotdog + "&hamburger=" + req.body.hamburger + "&salad=" +
-             req.body.salad + "&pizza=" + req.body.pizza + "&soda=" +req.body.soda; 
+  let url = "http://" + host + ":" + port + "/userNumber?firstname=" +
+             req.body.firstname + "&lastname=" + req.body.lastname + "&age=" +
+             req.body.age + "&email=" + req.body.email + "&occupation=" +req.body.occupation; 
 
   request.get(url, function( err, response, body) {
     if(err){
-      res.render('thankyou', { ticketNumber: -1 });
+      res.render('thankyou', { userNumber: -1 });
     } else {
-      let ticketInfo = JSON.parse(body);
-      res.render('thankyou', { ticketNumber: ticketInfo.result, order: ticketInfo.order  });
+      let userInfo = JSON.parse(body);
+      res.render('thankyou', { userNumber: userInfo.result, user: userInfo.user  });
       
     }
   });
