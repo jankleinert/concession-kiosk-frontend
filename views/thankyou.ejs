@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Concession Kiosk - Thank You!</title>
+    <title> User added - Thank You!</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Concession Kiosk - Thank You</h1>
-    <div>
+    <h1> New User! - Thank You</h1>
+    <div class="table-title" >
       <p>
-        Your order number is: <% if (ticketNumber) { %>
+        You are user number: <% if (ticketNumber) { %>
         <%= ticketNumber %> 
         <% } %>
     </p>
     </div>
-    <div>
-      Your order contains: <% if (order) { %>
-      <p>Hotdogs: <%= order.hotdog %></p>
-      <p>Hamburgers: <%= order.hamburger %></p>
-      <p>Salads: <%= order.salad %></p>
-      <p>Pizzas: <%= order.pizza %></p>
-      <p>Sodas: <%= order.soda %></p>  
+    <div class="table-wrapper">
+      Your user contains: <% if (user) { %>
+      <p>First Name: <%= user.firstname %></p>
+      <p>Last Name: <%= user.lastname %></p>
+      <p>Age: <%= user.age %></p>
+      <p>Email: <%= user.email %></p>
+      <p>Occupation: <%= user.occupation %></p>  
       <% } %>  
     </div>
 
