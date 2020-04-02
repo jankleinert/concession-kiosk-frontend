@@ -4,7 +4,11 @@ var request = require('request');
 var host = process.env.COMPONENT_BACKEND_HOST || '0.0.0.0';
 var port = process.env.COMPONENT_BACKEND_PORT || 8080;
 /* GET Users list */
-router.get('/allusers', function (req, res, next) {
+
+router.get('/allusers', function(req, res, next) {
+    res.render('index');
+  });
+router.post('/allusers', function (req, res, next) {
     let url = "http://" + host + ":" + port + "/allusers";
   
     request.get(url, function( err, response, body) {
