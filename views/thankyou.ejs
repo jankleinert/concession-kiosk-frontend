@@ -6,20 +6,20 @@
   </head>
   <body>
     <h1> New User! - Thank You</h1>
-    <div class="table-title" >
+    <div>
       <p>
         You are user number: <% if (ticketNumber) { %>
         <%= ticketNumber %> 
         <% } %>
     </p>
     </div>
-    <div class="table-wrapper">
-      Your user contains: <% if (user) { %>
-      <p>First Name: <%= user.firstname %></p>
-      <p>Last Name: <%= user.lastname %></p>
-      <p>Age: <%= user.age %></p>
-      <p>Email: <%= user.email %></p>
-      <p>Occupation: <%= user.occupation %></p>  
+    <div>
+      Your order contains: <% if (order) { %>
+      <p>First Name: <%= order.hotdog %></p>
+      <p>Last Name: <%= order.hamburger %></p>
+      <p>Age: <%= order.salad %></p>
+      <p>Email: <%= order.pizza %></p>
+      <p>Occupation: <%= order.soda %></p>  
       <% } %>  
     </div>
 
