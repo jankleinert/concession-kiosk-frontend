@@ -27,6 +27,19 @@ router.post('/', function (req, res, next) {
 });
 
 
+router.get('/allusers', function (req, res, next) {
+  let url = "http://" + host + ":" + port + "/allusers";
 
+  request.get(url, function( err, response, body) {
+    if(err){
+      res.render('allusers', { error: err });
+    } else {
+      let userInfo = JSON.parse(body);
+      console.log(userInfo);
+      res.render('allusers', { users: userInfo  });
+      
+    }
+  });
+})
 
 module.exports = router;
