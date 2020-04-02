@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 /* GET Users list */
-router.post('/', function (req, res, next) {
+router.get('/allusers', function (req, res, next) {
     let url = "http://" + host + ":" + port + "/allusers";
   
     request.get(url, function( err, response, body) {
@@ -10,6 +10,7 @@ router.post('/', function (req, res, next) {
         res.render('thankyou', { userNumber: -1 });
       } else {
         let userInfo = JSON.parse(body);
+        console.log(userInfo);
         res.render('thankyou', { users: userInfo  });
         
       }
