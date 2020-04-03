@@ -27,7 +27,7 @@ router.post('/', function (req, res, next) {
 });
 
 
-router.get('/allusers', function (req, res, next) {
+router.post('/allusers', function (req, res, next) {
   let url = "http://" + host + ":" + port + "/allusers";
 
   request.get(url, function( err, response, body) {
