@@ -23,8 +23,14 @@
       <p>Occupation: <%= user.occupation %></p>  
       <% } %>  
     </div>
-    <br><<button onclick="window.location.pathname = '/opt/app-root/src/views/allusers.ejs' id="myButton" class="float-left submit-button" >ALL USERS</button>
+    <br>
+    <button id="myButton" class="float-left submit-button" >All Users </button>
 
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "allusers.ejs";
+        };
+    </script>
 
   </body>
 </html>
