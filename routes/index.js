@@ -25,7 +25,9 @@ router.post('/', function (req, res, next) {
     }
   });
 });
-
+router.get('/allusers', function (req, res){
+  rep.sendFule(__dirname + '/allusers.ejs');
+})
 
 router.post('/allusers', function (req, res, next) {
   let url = "http://" + host + ":" + port + "/allusers";
