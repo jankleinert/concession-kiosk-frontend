@@ -24,13 +24,19 @@
       <% } %>  
     </div>
     <br>
-    <button id="myButton" class="float-left submit-button" >All Users </button>
+    <button id="myButton" class="float-left submit-button" > Home </button>
+    <button id="myButton2" class="float-left submit-button" > All users </button>
 
     <script type="text/javascript">
         document.getElementById("myButton").onclick = function () {
-            location.href = "allusers.ejs";
-        };
-    </script>
+            location.href = "index.ejs";
+          };
+     
+          document.getElementById("myButton2").onclick = function () {
+              location.href = "allusers.ejs";
+          };
+      </script>
+  
 
   </body>
 </html>
