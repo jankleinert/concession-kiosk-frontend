@@ -20,7 +20,7 @@ router.post('/', function (req, res, next) {
       res.render('thankyou', { userNumber: -1 });
     } else {
       let userInfo = JSON.parse(body);
-      res.render('allusers', { userNumber: userInfo.result, user: userInfo.user  });
+      res.render('thankyou', { userNumber: userInfo.result, user: userInfo.user  });
       
     }
   });
