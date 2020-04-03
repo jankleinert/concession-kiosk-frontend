@@ -24,6 +24,13 @@
           <h3>Occupation</h3><input type="tel" name="occupation" value="">
          </div>
           <br><input type="submit" class="btn btn-success" value="Add">
+          <button id="myButton3" class="float-left submit-button" > All users </button>
+
+      <script type="text/javascript"> 
+          document.getElementById("myButton3").onclick = function () {
+            location.href = "allusers.ejs";
+        };
+      </script>
       </form>
     </div>
   </body>
