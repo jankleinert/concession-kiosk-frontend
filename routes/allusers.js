@@ -5,10 +5,9 @@ const router = express.Router();
 router.get('/', function(req, res, next) {
   console.log('req: ' + req);
   
-  res.render('thankyou', { userNumber: 200 });
+  res.render('allusers');
 });
 
 router.get('')
 
 module.exports = router;
-

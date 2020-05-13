@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Concession Kiosk - Menu</title>
+    <title> Web App on Openshift</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <h1>Concession Kiosk - Menu</h1>
-    <div class="form-wrapper">
+  <body >
+    <h1>ADD USERS</h1>
+    <div class="table-wrapper" >
       <form action="/" method="post">
-        <div class="form-row">
-          <img class="hotdog" src="/images/hotdog.jpg" width="100"> <input type="tel" name="hotdog" value="0">
+        <div class="table-title">
+         <h3>First Name</h3><input type="tel" name="firstname" value="">
         </div>
-        <div class="form-row">
-          <img class="hamburger" src="/images/hamburger.jpg" width="100"> <input type="tel" name="hamburger" value="0">
-        </div>
-        <div class="form-row">
-          <img class="salad" src="/images/salad.jpg" width="100"> <input type="tel" name="salad" value="0">
-        </div>
-        <div class="form-row">
-          <img class="pizza" src="/images/pizza.jpg" width="100" > <input type="tel" name="pizza" value="0">
-        </div>
-        <div class="form-row">
-          <img class="soda" src="/images/soda.jpg" width="100"> <input type="tel" name="soda" value="0">
-        </div>
-          <input class="submit" type="submit" value="Place Order">
+        <div class="table-title">
+          <h3>Last Name</h3><input type="tel" name="lastname" value="">
+         </div>
+         <div class="table-title">
+          <h3>Age</h3><input type="tel" name="age" value="">
+         </div>
+         <div class="table-title">
+          <h3>Email</h3><input type="tel" name="email" value="">
+         </div>
+         <div class="table-title">
+          <h3>Occupation</h3><input type="tel" name="occupation" value="">
+         </div>
+          <br><input type="submit" class="btn btn-success" value="Add">
+          <button id="myButton3" class="float-left submit-button" > All users </button>
+
+      <script type="text/javascript"> 
+          document.getElementById("myButton3").onclick = function () {
+            location.href = "allusers.ejs";
+        };
+      </script>
       </form>
     </div>
   </body>
